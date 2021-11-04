@@ -1,18 +1,20 @@
 type Greeter = { name: string, polite: boolean }
 type PoliteGreet = { message: string };
+type UnpoliteGreet = string;
 
-function greet(name: string): string;
+function greet(name: string): UnpoliteGreet;
 function greet(name: Greeter): PoliteGreet;
-function greet(x: string | Greeter): string | PoliteGreet {
+function greet(x: string | Greeter): UnpoliteGreet | PoliteGreet {
   if (typeof x == "object") {
     return { message: `Dear Sir\Madam, I greet you ${x.name}` };
   } else {
-    return `Hello ${x}`;
+    const politeGreet: PoliteGreet = `Hello ${x}` as unknown as PoliteGreet;
+    return politeGreet;
   };
 
 }
 
-const main = () => {
+const OverrideFunctionSigniture = () => {
   const greet1 = greet("Adam");
   const greet2 = greet({ name: "Bela", polite: true } as Greeter)
   console.log(greet1);
@@ -20,6 +22,6 @@ const main = () => {
 }
 
 
-export default main;
+export default OverrideFunctionSigniture;
 
 
