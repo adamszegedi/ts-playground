@@ -20,3 +20,7 @@ const callSigniture = () => {
 }
 
 export default callSigniture;
+
+if (typeof require !== 'undefined' && require.main === module) {
+  callSigniture();
+}

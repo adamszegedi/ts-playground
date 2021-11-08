@@ -24,4 +24,8 @@ const OverrideFunctionSigniture = () => {
 
 export default OverrideFunctionSigniture;
 
+if (typeof require !== 'undefined' && require.main === module) {
+  OverrideFunctionSigniture();
+}
+
 

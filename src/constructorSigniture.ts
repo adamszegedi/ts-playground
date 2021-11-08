@@ -25,3 +25,7 @@ export default function constructorSigniture() {
   const fish = createNewFish(Fish);
   fish.swim();
 }
+
+if (typeof require !== 'undefined' && require.main === module) {
+  constructorSigniture();
+}
