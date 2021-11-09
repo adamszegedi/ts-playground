@@ -1,15 +1,14 @@
 type Greeter = { name: string, polite: boolean }
 type PoliteGreet = { message: string };
-type UnpoliteGreet = string;
 
-function greet(name: string): UnpoliteGreet;
+function greet(name: string): string;
 function greet(name: Greeter): PoliteGreet;
-function greet(x: string | Greeter): UnpoliteGreet | PoliteGreet {
+function greet(x: string | Greeter): string | PoliteGreet {
   if (typeof x == "object") {
     return { message: `Dear Sir\Madam, I greet you ${x.name}` };
   } else {
-    const politeGreet: PoliteGreet = `Hello ${x}` as unknown as PoliteGreet;
-    return politeGreet;
+    const unpoliteGreet = `Hello ${x}`;
+    return unpoliteGreet;
   };
 
 }
