@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // types get infered from variables
 const username = 'Adam';
 const fullName = username + 'Szegedi';

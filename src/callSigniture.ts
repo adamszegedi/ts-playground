@@ -9,7 +9,7 @@ function onlyProperFunctionPassable(fn: DescribeableFunction) {
 }
 
 const isOdd = (i: number): boolean => {
-  return !Boolean(i % 2);
+  return !(i % 2);
 }
 isOdd.description = "Check if the given number is Odd;"
 

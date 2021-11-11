@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "app": "npx tsc && node build/index.js"
+    "app": "npx tsc && node build/index.js",
+    "lint": "eslint . --ext .ts"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,9 @@
     "typescript": "^4.4.4"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "eslint": "^8.2.0",
     "ts-node": "^10.4.0"
   }
 }

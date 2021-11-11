@@ -5,11 +5,11 @@ function greet(name: string): string;
 function greet(name: Greeter): PoliteGreet;
 function greet(x: string | Greeter): string | PoliteGreet {
   if (typeof x == "object") {
-    return { message: `Dear Sir\Madam, I greet you ${x.name}` };
+    return { message: `Dear Sir Madam, I greet you ${x.name}` };
   } else {
     const unpoliteGreet = `Hello ${x}`;
     return unpoliteGreet;
-  };
+  }
 
 }
 

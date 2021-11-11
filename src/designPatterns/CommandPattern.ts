@@ -38,11 +38,12 @@ class SetValue extends Command<number> {
   execute(state: number) {
     this._originalValue = state;
     return this._value;
-  };
+  }
 
   undo() {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     return this._originalValue!;
-  };
+  }
 }
 
 

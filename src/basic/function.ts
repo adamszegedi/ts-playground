@@ -5,7 +5,7 @@ export function addNumbers(a: number, b: number) {
 }
 
 // const addString: (str1: string, str2: string) => string
-export const addString = (str1: string, str2: string = " ") => {
+export const addString = (str1: string, str2 = " ") => {
   return `${str1} ${str2}`;
 }
 
