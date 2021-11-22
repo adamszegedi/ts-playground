@@ -20,7 +20,6 @@ const OverrideFunctionSigniture = () => {
   console.log(greet2);
 }
 
-
 export default OverrideFunctionSigniture;
 
 if (typeof require !== 'undefined' && require.main === module) {

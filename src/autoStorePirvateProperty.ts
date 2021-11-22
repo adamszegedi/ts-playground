@@ -2,10 +2,10 @@ class Bird {
   constructor(private _name: string) { }
 
   get name() {
-    return this._name;
+    return this._name.toLocaleUpperCase();
   }
 }
 
-
-const bird = new Bird('Ted');
+// One of the niceest feature Imho;
+const bird = new Bird('ted');
 console.log(bird.name)

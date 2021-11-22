@@ -18,7 +18,7 @@ function findHouses(input: string|House[], filter?: (house: House) => boolean): 
   
   const houses: House[] = typeof input === "string" ? JSON.parse(input): input;
 
-  const HousesWithId: HouseWithID[] = houses.map((element, index) => ({id:index, ...element}));
+  const HousesWithId: HouseWithID[] = houses.map((element) => ({id:houses.indexOf(element), ...element}));
 
   return HousesWithId.filter(filter || (() => true));
 }
