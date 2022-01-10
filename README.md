@@ -29,3 +29,7 @@ The above command will add a nice default setup for a typescript project.
 * via .npmrc you can control the version 
 
         node -v > .npmrc
+
+* Run individual test files:
+
+        npx ts-node .\src\challanges\challange-2\filter.ts
