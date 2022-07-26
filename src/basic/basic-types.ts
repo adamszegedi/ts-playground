@@ -22,28 +22,28 @@ const meWithoutOptional: Person = { firstname: "Adam", surename: "Szegedi" };
 const ids: Record<number, string> = {
   10: "a",
   20: "b"
-}
+};
 // You cann add these key-value pairs without any error
 ids[30] = "c";
 
 
 const mapOfId = new Map<number, string>();
-mapOfId.set(10, "ten")
-mapOfId.set(20, "twenty")
-mapOfId.set(30, "thirty")
+mapOfId.set(10, "ten");
+mapOfId.set(20, "twenty");
+mapOfId.set(30, "thirty");
 const nameOf10 = mapOfId.get(10);
 
 if (nameOf10) {
   // eliminated undefined by checking if nameOf10 is thurthy
-  nameOf10
+  nameOf10;
 }
 
 // the for loop i variable also infers the type 
 for (let i = 0; i < 10; i++) {
-  console.log(i)
+  console.log(i);
 }
 
 [1, 2, 3].forEach((x) => console.log(x * 2));
 
 // the new array also infers the type number[]
-const multipledByTen = [4, 5].map((x) => x * 10)
+const multipledByTen = [4, 5].map((x) => x * 10);

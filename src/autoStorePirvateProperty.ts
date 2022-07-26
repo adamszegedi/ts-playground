@@ -8,4 +8,4 @@ class Bird {
 
 // One of the niceest feature Imho;
 const bird = new Bird('ted');
-console.log(bird.name)
+console.log(bird.name);

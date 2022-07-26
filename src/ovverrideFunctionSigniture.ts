@@ -15,10 +15,10 @@ function greet(x: string | Greeter): string | PoliteGreet {
 
 const OverrideFunctionSigniture = () => {
   const greet1 = greet("Adam");
-  const greet2 = greet({ name: "Bela", polite: true } as Greeter)
+  const greet2 = greet({ name: "Bela", polite: true } as Greeter);
   console.log(greet1);
   console.log(greet2);
-}
+};
 
 export default OverrideFunctionSigniture;
 

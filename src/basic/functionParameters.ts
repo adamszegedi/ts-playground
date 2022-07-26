@@ -1,4 +1,4 @@
-const text = "Lorem ipsum dolorem"
+const text = "Lorem ipsum dolorem";
 
 // you can pass a generic type and apply to the value and the function paramater aswell
 function printToFile<T>(text: T, fn: (x: T) => void) {
@@ -39,4 +39,4 @@ const double = multiplierFactory(2);
 
 // here doubled will be number[] what an awsome feature
 const doubled = [1, 2, 3, 4].map((x) => double(x));
-console.log(doubled)
+console.log(doubled);

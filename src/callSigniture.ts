@@ -10,14 +10,14 @@ function onlyProperFunctionPassable(fn: DescribeableFunction) {
 
 const isOdd = (i: number): boolean => {
   return !(i % 2);
-}
-isOdd.description = "Check if the given number is Odd;"
+};
+isOdd.description = "Check if the given number is Odd;";
 
 
 const callSigniture = () => {
-  const x = onlyProperFunctionPassable(isOdd)
+  const x = onlyProperFunctionPassable(isOdd);
   console.log(x);
-}
+};
 
 export default callSigniture;
 

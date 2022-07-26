@@ -16,7 +16,7 @@ class Fish {
   }
 
   public swim() {
-    console.log(`I am swimming - bye ${this.name}`)
+    console.log(`I am swimming - bye ${this.name}`);
   }
 }
 

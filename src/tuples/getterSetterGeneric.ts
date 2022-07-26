@@ -6,8 +6,8 @@ function UseState<T>(variable: T):[Getter<T>, Setter<T>]{
   let x = variable;
   return [
     ()=>x,
-    (value) => {x = value}
-  ]
+    (value) => {x = value;}
+  ];
 }
 
 const [numVariableGetter, numVariableSetter] = UseState(0);
@@ -17,6 +17,6 @@ numVariableSetter(10);
 console.log(numVariableGetter());
 
 const [stringVariableGetter, stringVariableSetter] = UseState("Hello");
-console.log(stringVariableGetter())
-stringVariableSetter('World')
-console.log(stringVariableGetter())
+console.log(stringVariableGetter());
+stringVariableSetter('World');
+console.log(stringVariableGetter());

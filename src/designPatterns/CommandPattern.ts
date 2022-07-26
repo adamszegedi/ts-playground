@@ -18,12 +18,12 @@ class CommandStack<State> {
   }
 
   undo() {
-    const command = this.stack.pop()
+    const command = this.stack.pop();
     if (command) {
       this._state = command.undo(this._state);
       return;
     }
-    console.log("No more undo stack!")
+    console.log("No more undo stack!");
   }
 }
 
@@ -68,29 +68,29 @@ class SubtractOne extends Command<number> {
 }
 
 const cs = new CommandStack<number>(0);
-console.log(cs.state)
+console.log(cs.state);
 cs.execute(new AddONe());
-console.log(cs.state)
+console.log(cs.state);
 cs.execute(new SetValue(32));
-console.log(cs.state)
+console.log(cs.state);
 cs.execute(new AddONe());
-console.log(cs.state)
+console.log(cs.state);
 cs.undo();
-console.log(cs.state)
+console.log(cs.state);
 cs.execute(new SubtractOne());
-console.log(cs.state)
-cs.undo()
-console.log(cs.state)
+console.log(cs.state);
+cs.undo();
+console.log(cs.state);
 cs.execute(new SetValue(102));
-console.log(cs.state)
+console.log(cs.state);
 cs.execute(new AddONe());
-console.log(cs.state)
+console.log(cs.state);
 cs.undo();
-console.log(cs.state)
+console.log(cs.state);
 cs.undo();
-console.log(cs.state)
-cs.undo()
-cs.undo()
-console.log("We managed to undo every action")
-cs.undo()
-console.log(cs.state)
+console.log(cs.state);
+cs.undo();
+cs.undo();
+console.log("We managed to undo every action");
+cs.undo();
+console.log(cs.state);
