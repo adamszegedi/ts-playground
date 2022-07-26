@@ -27,12 +27,12 @@ inMemoryDatabase.get("hello");
 //inMemoryDatabase.db["hello"];
 
 
-interface Persistable {
+export interface Persistable {
   saveToString(): string,
   restoreFromString(storedData: string): void
 }
 
-class PersistableDataBase extends InMemoryDatabase implements Persistable{
+export class PersistableDataBase extends InMemoryDatabase implements Persistable{
   saveToString(): string {
     return JSON.stringify(this.db);
   }
